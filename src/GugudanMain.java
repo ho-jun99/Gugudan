@@ -4,12 +4,13 @@ public class GugudanMain {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("insert first num");
-        int first_num = scanner.nextInt();
-        System.out.println("insert second num)");
-        int second_num = scanner.nextInt();
+        String inputValue = scanner.nextLine();
+        String[] splitValue = inputValue.split(",");
 
-        Gugudan.print(Gugudan.calculate(first_num, second_num));
+        int frist_num = Integer.parseInt(splitValue[0]);
+        int second_num = Integer.parseInt(splitValue[1]);
+
+        Gugudan.print(Gugudan.calculate(frist_num,second_num));
 
 
     }
